@@ -57,3 +57,19 @@ Now you can open your browser, and copy/paste the URL shown from your training i
 
 
 You are now ready to code 😃
+
+## Install mpi4py and test the installation
+### Using pip to install mpi4py
+Log into the master instance
+Install via pip
+
+```$ sudo env MPICC=/usr/lib64/openmpi/bin/mpicc pip install mpi4py```
+
+Testing the installation
+1. Set the environment
+
+```export PATH=$PATH:/usr/lib64/openmpi/bin```
+
+2. Test the installation of mpi4py
+
+```mpiexec -n 5 python -m mpi4py.bench helloworld```
